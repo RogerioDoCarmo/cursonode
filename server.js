@@ -47,7 +47,7 @@ app.post('/todo', async(req, res) => {
 
 		let savedTodo = await newTodo.save();
 
-		res.json({ success: false, message: "Sucesso!!!", todo: savedTodo }); // ESTAVA TRUE!!!
+		res.json({ success: true, message: "Sucesso!!!", todo: savedTodo }); // ESTAVA TRUE!!!
 	}catch(err){
 		res.json({ success: false, message: err.message });
 	}
